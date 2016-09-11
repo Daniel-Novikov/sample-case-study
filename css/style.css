@@ -1600,7 +1600,7 @@ img {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-image: url("/img/header.jpg");
+  background-image: url("../img/header.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -1624,7 +1624,7 @@ img {
   position: relative;
 }
 .section--bg {
-  background-image: url("/img/bg.jpg");
+  background-image: url("../img/bg.jpg");
   background-size: 100% auto;
   background-position: center bottom;
   background-repeat: no-repeat;
