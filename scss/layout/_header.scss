@@ -1,0 +1,37 @@
+@include block('header') {
+    position: relative;
+    text-align: center;
+    padding-top: 220px;
+    padding-bottom: 220px;
+
+    @media screen and (max-width: $phone-width) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    @include element('bg') {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-image: url('/img/header.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    @include element('label') {
+        font-family: $font-accent;
+    	font-size: 20px;
+    	line-height: 24px;
+    	color: $color-light;
+    	font-weight: 400;
+    }
+
+    @include element('text') {
+        font-size: 14px;
+    	line-height: 18px;
+    	color: $color-light;
+    }
+}

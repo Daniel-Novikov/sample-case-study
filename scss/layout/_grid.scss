@@ -1,0 +1,67 @@
+.Grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Grid-cell {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.Grid--center {
+    justify-content: center;
+}
+
+.Grid--start {
+    align-items: flex-start;
+}
+.Grid--middle {
+    align-items: center;
+}
+.Grid--between {
+    justify-content: space-between;
+
+    &.Grid--1of2 > .Grid-cell {
+        flex: 0 0 48%;
+    }
+}
+.Grid--reverse {
+    flex-direction: row-reverse;
+}
+
+/* Base classes for all media */
+.Grid--fit > .Grid-cell {
+    flex: 1;
+}
+.Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+}
+.Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+}
+.Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%;
+}
+.Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+}
+
+
+@media screen and (max-width: $phone-width){
+    .Grid--center--phone {
+        justify-content: center;
+    }
+
+    .Grid--full--phone > .Grid-cell {
+        flex: 0 0 100% !important;
+    }
+}
+
+@media screen and (max-width: $tablet-width){
+    .Grid--center--tablet {
+        justify-content: center;
+    }
+
+    .Grid--full--tablet > .Grid-cell {
+        flex: 0 0 100% !important;
+    }
+}

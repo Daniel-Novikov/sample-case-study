@@ -1,0 +1,45 @@
+/*
+*   Spacing global classes.
+*   Example - ptm = Padding Top Medium and etc.
+*/
+$screen_types: n (tablet $tablet-width) (phone $phone-width);
+$spacing_types: (m margin) (p padding);
+$position_values: (t top) (b bottom) (l left) (r right) a;
+$spacing_values: (n 0) (t $s-tn) (s $s-sm) (m $s-md) (l $s-lg) (g $s-gt) (a auto);
+
+@each $screen_type in $screen_types {
+     @each $spacing_type in $spacing_types{
+        @each $position_value in $position_values {
+             @each $spacing_value in $spacing_values{
+
+                @if $screen_type == n {
+                      @if $position_value == a{
+                         .#{nth($spacing_type, 1) + nth($position_value, 1) + nth($spacing_value, 1)} {
+                             #{nth($spacing_type, 2)}: #{nth($spacing_value,2)};
+                         }
+                     }
+                     @else {
+                         .#{nth($spacing_type, 1) + nth($position_value, 1) + nth($spacing_value, 1)} {
+                             #{nth($spacing_type, 2)}-#{nth($position_value, 2)}: #{nth($spacing_value,2)};
+                         }
+                     }
+                 }
+                 @else {
+                     @media screen and (max-width: #{nth($screen_type, 2)}){
+                        @if $position_value == a {
+                            .#{nth($spacing_type, 1) + nth($position_value, 1) + nth($spacing_value, 1)}--#{nth($screen_type, 1)} {
+                                #{nth($spacing_type, 2)}: #{nth($spacing_value,2)};
+                            }
+                        }
+                        @else {
+                            .#{nth($spacing_type, 1) + nth($position_value, 1) + nth($spacing_value, 1)}--#{nth($screen_type, 1)} {
+                                #{nth($spacing_type, 2)}-#{nth($position_value, 2)}: #{nth($spacing_value,2)};
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

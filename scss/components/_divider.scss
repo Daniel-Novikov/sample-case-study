@@ -1,0 +1,27 @@
+@include block('divider') {
+    position: absolute;
+    z-index: -1;
+    width: 120%;
+    transform: rotate(-5deg) translateX(-50%);
+    left: 50%;
+
+    @include modifier('alp') {
+        height: 50%;
+        bottom: 0;
+        background: $bg-body-light;
+
+        @media screen and (max-width: $phone-width){
+            height: 70%;
+        }
+    }
+
+    @include modifier('top') {
+        height: 500px;
+        top: 100px;
+        background: $bg-body-smoke;
+
+        @media screen and (max-width: $phone-width){
+            display: none;
+        }
+    }
+}

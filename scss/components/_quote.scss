@@ -1,0 +1,42 @@
+@include block('quote') {
+    position: relative;
+
+    @include element('globe') {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include element('text') {
+        max-width: 450px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 400;
+        font-family: $font-accent;
+
+        span {
+            display: block;
+            font-size: 100px;
+            line-height: 100px;
+            font-weight: 800;
+
+            @media screen and (max-width: $phone-width){
+                font-size: 90px;
+                line-height: 90px;
+            }
+        }
+    }
+
+    @include element('bar') {
+        background-color: $color-dark;
+        height: 1px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+
+}

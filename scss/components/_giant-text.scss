@@ -1,0 +1,27 @@
+@include block('giant-text') {
+	font-size: 250px; // !!!!!!
+	line-height: 250px; // !!!!!!
+	font-weight: bold;
+	letter-spacing: -2px;
+
+	@media screen and (max-width: $wrapper-large) {
+		font-size: 200px;
+		line-height: 200px;
+    }
+
+	@media screen and (max-width: $wrapper-medium) {
+		font-size: 150px;
+		line-height: 150px;
+	}
+
+	@media screen and (max-width: $tablet-width) {
+		font-size: 100px;
+		line-height: 100px;
+	}
+
+	@media screen and (max-width: $phone-width) {
+		font-size: 55px;
+		line-height: 55px;
+        text-align: left;
+	}
+}

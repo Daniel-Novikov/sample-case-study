@@ -1,0 +1,63 @@
+.text-center {
+	text-align: center;
+}
+
+@include block('text-left') {
+	text-align: left;
+
+	@include modifier('tablet') {
+
+		@media screen and (max-width: $tablet-width){
+			text-align: left;
+		}
+	}
+
+	@include modifier('phone') {
+
+		@media screen and (max-width: $phone-width){
+			text-align: left;
+		}
+	}
+}
+
+@include block('text-center') {
+	text-align: center;
+
+	@include modifier('tablet') {
+
+		@media screen and (max-width: $tablet-width){
+			text-align: center;
+		}
+	}
+
+	@include modifier('phone') {
+
+		@media screen and (max-width: $phone-width){
+			text-align: center;
+		}
+	}
+}
+
+
+.hide {
+	display: none;
+
+	@include modifier('tablet') {
+
+		@media screen and (max-width: $tablet-width){
+			display: none;
+		}
+	}
+
+	@include modifier('phone') {
+
+		@media screen and (max-width: $phone-width){
+			display: none;
+		}
+	}
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
