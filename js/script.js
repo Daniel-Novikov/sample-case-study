@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-
+    new WOW().init();
+    
     var fadeUntil = 700,
         speed = 2.5,
         offset = 0,

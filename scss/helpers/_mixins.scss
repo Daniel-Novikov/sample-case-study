@@ -13,12 +13,12 @@
   }
 }
 
-@mixin rotate($deg) {
-	-ms-transform: rotate($deg);
-	-moz-transform: rotate($deg);
-	-webkit-transform: rotate($deg);
-	-o-transform: rotate($deg);
-	transform: rotate($deg);
+@mixin rotateCenter($deg) {
+	-ms-transform: translate(-50%, -50%) rotate($deg);
+	-moz-transform: translate(-50%, -50%) rotate($deg);
+	-webkit-transform: translate(-50%, -50%) rotate($deg);
+	-o-transform: translate(-50%, -50%) rotate($deg);
+	transform: translate(-50%, -50%) rotate($deg);
 }
 
 @mixin animation-rotate($time) {
@@ -27,4 +27,21 @@
     -ms-animation: rotating $time linear infinite;
     -o-animation: rotating $time linear infinite;
     animation: rotating $time linear infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		@include rotateCenter(0deg);
+	}
+	to {
+		@include rotateCenter(360deg);
+	}
+}
+@keyframes rotating {
+	from {
+		@include rotateCenter(0deg);
+	}
+	to {
+		@include rotateCenter(360deg);
+	}
 }
