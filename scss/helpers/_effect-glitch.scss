@@ -3,30 +3,38 @@
     display: inline-block;
     cursor: pointer;
 
+    &:before {
+        content: attr(data-text);
+        width: 100%;
+        position: absolute;
+        left: -2px;
+        text-shadow: 1px 0 rgba(0,0,250,0.6);
+        top: 0;
+        background: transparent;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 1s 2 linear alternate-reverse;
+    }
+
+    &:after {
+        content: attr(data-text);
+        width: 100%;
+        position: absolute;
+        left: 2px;
+        text-shadow: -1px 0 rgba(255,0,0,0.6);
+        top: 0;
+        background: transparent;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim 1s 2 linear alternate-reverse;
+    }
+
     &:hover {
         &:before {
-            content: attr(data-text);
-            width: 100%;
-            position: absolute;
-            left: -2px;
-            text-shadow: 1px 0 rgba(0,0,250,0.6);
-            top: 0;
-            background: transparent;
-            overflow: hidden;
-            clip: rect(0, 900px, 0, 0);
             animation: noise-anim-2 1s infinite linear alternate-reverse;
         }
 
         &:after {
-            content: attr(data-text);
-            width: 100%;
-            position: absolute;
-            left: 2px;
-            text-shadow: -1px 0 rgba(255,0,0,0.6);
-            top: 0;
-            background: transparent;
-            overflow: hidden;
-            clip: rect(0, 900px, 0, 0);
             animation: noise-anim 1s infinite linear alternate-reverse;
         }
     }

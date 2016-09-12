@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link rel="icon" href="img/favicon.png?v=2" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png?v=1" type="image/x-icon">
     <title>Sample Case Study</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,8 +12,8 @@
 <body class="pbg">
     <div class="header section">
         <div class="header__bg" id="header-bg"></div>
-        <div class="wrapper wrapper--small" id="header-content">
-            <h1 class="mbt">Air New Zealand </h1>
+        <div class="wrapper wrapper--small wow fadeIn" id="header-content">
+            <h1 class="mbt effect-glitch" data-text="Air New Zealand">Air New Zealand</h1>
             <div class="header__label mbt">All case studies</div>
             <div class="header__text">Website Design / Campaign / Youtube / etc</div>
         </div>
@@ -21,15 +21,15 @@
 
     <div class="section">
         <div class="wrapper wrapper--small wrapper--padding">
-            <h2 class="mbs--phone mbm effect-glitch" data-text="Air New Zealand / Gladeye">Air New Zealand / Gladeye</h2>
-            <p>
+            <h2 class="mbs--phone mbm effect-glitch wow fadeInLeft" data-text="Air New Zealand">Air New Zealand</h2>
+            <p class="wow fadeInUp">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pellentesque diam eu nisl porta,
                 eget gravida lectus posuere. Aenean sit amet diam diam. Nunc at porta ante, ac porttitor leo.
                 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                 Nulla eleifend hendrerit placerat. Suspendisse purus diam, hendrerit ac consequat in, volutpat
                 at orci. Mauris euismod ullamcorper ornare.
             </p>
-            <p>
+            <p class="wow fadeInUp">
                 Vivamus ut turpis ipsum. Aenean pulvinar neque vel dapibus porta. Sed feugiat, quam a dignissim
                 gravida, tortor justo sagittis neque, vitae volutpat ex sem id lorem.
             </p>
@@ -37,17 +37,17 @@
     </div>
 
     <div class="section pbl pbn--tablet text-center text-left--phone">
-        <div class="giant-text wow bounceInUp">Antarctica</div>
+        <div class="giant-text wow fadeInLeft">Antarctica</div>
     </div>
 
     <div class="section">
         <div class="wrapper wrapper--small wrapper--padding">
-            <h2 class="mbm mbs--phone effect-glitch" data-text="Background">Background</h2>
-            <p>
+            <h2 class="mbm mbs--phone effect-glitch wow fadeInLeft" data-text="Background">Background</h2>
+            <p class="wow fadeInUp">
                 In late 2013, Air New Zealand launched a global search to find an environmental
                 enthusiast who would share the wonders of the Antarctic frozen continent with the world.
             </p>
-            <p>
+            <p class="wow fadeInUp">
                 Australian student filmmaker Marli Lopez-Hope and Kiwi ‘outdoorsman’ Michael Armstrong
                 were selected from amongst 2,000 applicants to share this adventure. Accompanying
                 them was renowned National Geographic photographer Jason Edwards. Our challenge was
@@ -58,16 +58,20 @@
     </div>
 
     <div class="section text-center">
-        <img src="img/display_screens.png" alt="Responsive" />
+        <div class="wrapper wrapper--medium screens">
+            <img class="screens__desktop wow fadeIn" src="img/Large-Display.png" alt="Large" />
+            <img class="screens__mobile wow fadeInLeftBig" src="img/Mobile.png" alt="Mobile" />
+            <img class="screens__tablet wow fadeInRightBig" src="img/Tablet.png" alt="Tablet" />
+        </div>
         <div class="wrapper wrapper--medium Grid Grid--1of2 Grid--between Grid--full--phone mtl mbm mts--phone mbn--phone">
-            <div class="Grid-cell text-left mbm">
+            <div class="Grid-cell text-left mbm wow fadeInUp">
                 <h2 class="effect-glitch" data-text="Our Response">Our Response</h2>
                 <p>
                     Working to an extremely tight timeline, we produced a modern responsive
                     website in five languages, accessible across desktop, mobile and tablet devices.
                 </p>
             </div>
-            <div class="Grid-cell text-left mbm">
+            <div class="Grid-cell text-left mbm wow fadeInUp">
                 <h2 class="effect-glitch" data-text="Social and Sexy">Social and Sexy</h2>
                 <p>
                     Integrated with Sina Weibo, China’s popular social media network, the campaign
@@ -78,11 +82,11 @@
     </div>
 
     <div class="section section--bg text-center">
-        <div class="divider divider--alp"></div>
+        <div class="divider divider--alp" id="divider-alp"></div>
         <img src="img/laptop_screen.png" alt="Work Example" />
         <div class="wrapper wrapper--small wrapper--padding text-left--phone">
-            <h2 class="mbm mbs--phone effect-glitch" data-text="Defeating the Tyranny of Choice">Defeating the Tyranny of Choice</h2>
-            <p>
+            <h2 class="mbm mbs--phone effect-glitch wow slideInDown" data-text="Defeating the Tyranny of Choice">Defeating the Tyranny of Choice</h2>
+            <p class="wow fadeInUp">
                 Everyone travels differently, so we needed options for customisation but we wanted to be careful not
                 to overwhelm the customer with the tyranny of choice that plagues so many travel sites. Travellers with
                 Pure Journeys can choose between dozens of road trips, but the configuration and options of those
@@ -97,9 +101,12 @@
         <div class="divider divider--top"></div>
         <div class="wrapper wrapper--large Grid Grid--1of2 Grid--middle Grid--full--tablet">
             <div class="Grid-cell text-left text-center--tablet">
-                <img src="img/social_bannners.png" alt="Social banner" />
+                <img class="wow fadeInLeft" src="img/social/FB.png" alt="Social banner" />
+                <img class="wow fadeInLeft" src="img/social/Weibo.png" alt="Social banner" />
+                <img class="wow fadeInLeft" src="img/social/Google.png" alt="Social banner" />
+                <img class="wow fadeInLeft" src="img/social/youtube.png" alt="Social banner" />
             </div>
-            <div class="Grid-cell plg pln--tablet text-left mtm mbm mbn--tablet">
+            <div class="Grid-cell plg pln--tablet text-left mtm mbm mbn--tablet wow fadeInRight">
                 <h2 class="mbm mbs--tablet effect-glitch" data-text="Social and Sexy">Social and Sexy</h2>
                 <p>
                     Integrated with Sina Weibo, China’s popular social media network, the campaign featured gorgeous
@@ -118,19 +125,19 @@
         <div class="quote wrapper--padding">
             <img class="quote__globe" src="img/antarctica_globe.png" alt="Antarctica Globe" />
             <div class="quote__text">
-                <span>“</span>
-                <p>Untouched beauty, relentless extremes and cutting edge science</p>
-                <div class="quote__bar"></div>
+                <span class="wow fadeInDown">“</span>
+                <p class="wow fadeInUp">Untouched beauty, relentless extremes and cutting edge science</p>
+                <div class="quote__bar wow slideInLeft"></div>
             </div>
         </div>
 
         <div class="wrapper wrapper--large Grid Grid--1of2 Grid--reverse Grid--full--tablet">
-            <div class="Grid-cell Grid Grid--start Grid--center--tablet mtm ">
-                <img src="img/banner_1.png" alt="Banner" class="hide--phone" />
-                <img src="img/banner_2.png" alt="Banner" />
-                <img src="img/banner_3.png" alt="Banner" />
+            <div class="Grid-cell Grid Grid--start Grid--center--tablet mtm">
+                <img src="img/banner_1.png" alt="Banner" class="hide--phone wow slideInRight" />
+                <img src="img/banner_2.png" alt="Banner" class="wow slideInUp" />
+                <img src="img/banner_3.png" alt="Banner" class="wow slideInRight"/>
             </div>
-            <div class="Grid-cell prg prn--tablet mtm mbm text-left">
+            <div class="Grid-cell prg prn--tablet mtm mbm text-left wow slideInLeft">
                 <h2 class="mbm mbs--tablet effect-glitch" data-text="Banners, banners &amp; banners">Banners, banners &amp; banners</h2>
                 <p>
                     Integrated with Sina Weibo, China’s popular social media network, the campaign featured
@@ -142,9 +149,9 @@
 
         <div class="quote wrapper--padding">
             <div class="quote__text">
-                <div class="quote__bar"></div>
-                <span class="mbs mts">17,240</span>
-                <p>hours of brand engagement over a 28 day period</p>
+                <div class="quote__bar wow slideInLeft"></div>
+                <span class="mbs mts" id="count">17,240</span>
+                <p class="wow slideInUp">hours of brand engagement over a 28 day period</p>
             </div>
         </div>
 
