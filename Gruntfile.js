@@ -22,6 +22,16 @@ module.exports = function(grunt) {
             }
         },
 
+        autoprefixer: {
+            options: {
+                // Task-specific options go here.
+            },
+            css: {
+                src: 'css/style.css',
+                dest: 'css/style.css'
+            },
+        },
+
         watch: {
             options: {
                 livereload: true
@@ -55,8 +65,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
-    grunt.registerTask('dev', ['sass:dev', 'connect']);
+    grunt.registerTask('dev', ['sass:dev', 'autoprefixer', 'connect']);
+    grunt.registerTask('build', ['sass:build', 'autoprefixer']);
     grunt.registerTask('default', ['dev', 'watch']);
 
 };
